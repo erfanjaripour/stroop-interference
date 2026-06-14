@@ -1,0 +1,7 @@
+{
+    "shapiro_statistic": 0.970386525516236,
+    "shapiro_pvalue": 0.057317709377283484,
+    "skewness": 0.5656300723596749,
+    "kurtosis": -0.07850485565034404,
+    "n_subjects": 81
+}
