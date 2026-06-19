@@ -38,3 +38,93 @@ The analysis followed a structured sequence. First, descriptive statistics were 
 
 
 
+\# Results
+
+
+
+\## Sample and dataset summary
+
+The final analytic sample consisted of 81 participants. All participants contributed reaction time (RT) data across congruent, neutral, and incongruent conditions. Quality control checks displayed acceptable overall data quality, and no additional participants were excluded after quality control.
+
+Mean accuracy rates by condition are reported in accuracy-by-condition.csv. Accuracy was high across all conditions, suggesting generally consistent task performance. Participant-level quality control results are summarized in participant-qc.csv, and no further exclusions were applied during the analysis.
+
+Assumption checks for parametric testing are reported in assumption-checks.json. The distribution of the Stroop effect did not significantly deviate from normality (Shapiro–Wilk W = 0.971, p = 0.060). Skewness (0.410) and kurtosis (-0.573) were also within acceptable ranges, supporting the assumption of approximate normality.
+
+
+
+\## Descriptive RT pattern by condition
+
+Mean reaction times increased across conditions, with the fastest responses in the congruent condition and the slowest responses in the incongruent condition. Condition-level RT values are reported in rt-by-condition.csv.
+
+Figure 1 (rt-by-condition-bar) shows the mean RT pattern across conditions and illustrates a clear Stroop interference effect. Figure 2 (rt-by-condition-box) shows the full RT distributions, including variability and outliers, suggesting that the observed condition differences were not driven by a small number of extreme observations.
+
+
+
+\## Descriptive accuracy pattern by condition
+
+Accuracy was high across all conditions, with only small differences between conditions. Condition-level accuracy values are reported in accuracy-by-condition.csv. At the descriptive level, there was no clear evidence of a speed–accuracy trade-off.
+
+
+
+\## Stroop effect at participant level
+
+Participant-level Stroop interference scores were calculated as the difference between incongruent and congruent RTs. The distribution of these scores is summarized in subject-level-stroop-effects.csv.
+
+The mean Stroop effect was 0.1063 seconds. Considerable variation was observed across participants, as shown in Figure 5 (individual-difference-stroop-effect), suggesting that the magnitude of interference is different between individuals.
+
+Figures 3 (stroop-effect-distribution-bar) and 4 (stroop-effect-distribution-box) provide additional summaries of the Stroop effect distribution at the group level.
+
+
+
+\## Inferential test result
+
+A paired-samples t-test showed a highly significant Stroop interference effect:
+
+t(80) = 17.77, p = 1.67 × 10⁻²⁹.
+
+The null hypothesis of no difference between incongruent and congruent reaction times was rejected.
+
+
+
+\## Effect size and confidence interval
+
+The magnitude of the Stroop effect was estimated using a paired-samples approach. The mean difference between incongruent and congruent conditions was 0.1063 seconds across 81 participants, with a 95% confidence interval calculated using a t-distribution-based standard error. It is reported in the analysis outputs. The effect was large and highly reliable (t(80) = 17.77, p < 10⁻²⁸, dz = 1.97), showing strong interference at the group level. Assumption checks also showed that the paired-difference distribution was approximately normal (Shapiro–Wilk W = 0.971, p = 0.060).
+
+
+
+\## Robustness checks
+
+Normality of the paired difference scores was assessed using the Shapiro–Wilk test and additional distributional statistics (assumption-checks.json). The test was non-significant (p = 0.060), providing no strong evidence against normality.
+
+Skewness and kurtosis values remained within acceptable ranges for parametric analysis in a repeated-measures design. These results support the validity of the t-test results.
+
+Overall, there was no significant evidence of non-normality that would require primary reliance on non-parametric methods.
+
+Model-vs-data comparison
+
+A computational simulation model was compared with the empirical RT distributions using a simple additive interference framework. Simulated outputs are provided in simulated-data.csv.
+
+Figure 7 (model-vs-data) compares the empirical and simulated RT distributions. The model reproduces the overall Stroop pattern, with slower responses in the incongruent condition and faster responses in the congruent and neutral conditions.
+
+
+
+\## Tables and figures reference summary
+
+Table 1: Condition-level descriptives (RT and accuracy) (table1-descriptives.csv)
+
+Table 2: Inferential statistics for the Stroop effect (table2-inferential-results.csv)
+
+Figure 1: rt-by-condition-bar
+
+Figure 2: rt-by-condition-box
+
+Figure 3: stroop-effect-distribution-bar
+
+Figure 4: stroop-effect-distribution-box
+
+Figure 5: individual-difference-stroop-effect
+
+Figure 6: baseline-vs-effect
+
+Figure 7: model-vs-data
+
