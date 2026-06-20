@@ -4,11 +4,15 @@
 
 \## Participants
 
-The dataset consisted of 85 subject-level data files from repeated behavioral recordings in a Stroop task experiment. During data integrity inspection, a mismatch between 85 files and 81 unique participants was found. It was resolved by identifying a subject–session encoding structure in the filenames, including suffix-based session markers such as “b,” which showed that some participants contributed more than one session. The dataset was then standardized by separating participant identity from session identity, resulting in a hierarchical subject–session–trial structure. No participants were excluded from the final dataset, as all files contained valid behavioral observations after preprocessing.
+
+
+The dataset consisted of 85 subject-session files corresponding to 81 unique participants. Inspection of file identifiers revealed a hierarchical structure in which some participants contributed multiple recording sessions. To resolve this, participant identity and session identity were explicitly separated, yielding a subject–session–trial data structure. All analyses in this manuscript were conducted at the participant level by aggregating trials across sessions within each participant. Sessions were not treated as independent statistical units, and no participant was excluded on the basis of having multiple sessions. This aggregation ensures that inferential statistics respect the independence assumption at the participant level while retaining all available trial-level observations.
 
 
 
 \## Materials / dataset
+
+
 
 The dataset comprised trial-level behavioral responses from a computerized Stroop task. It included reaction time (RT) and accuracy measures across experimental conditions. The dataset is linked to an OSF project (reference: https://osf.io/kxpqu/overview) and contains structured experimental recordings of cognitive interference under congruent, incongruent, and neutral stimulus conditions.
 
@@ -16,25 +20,33 @@ The dataset comprised trial-level behavioral responses from a computerized Stroo
 
 \## Design
 
-The study used a within-subject repeated-measures Stroop design. Each participant completed trials in three conditions: congruent, incongruent, and neutral. The main experimental manipulation was the level of interference between stimulus meaning and response requirements, measured through these conditions.
+
+
+The study used a within-subject Stroop design with repeated measures. Each participant did trials in congruent, incongruent, and neutral conditions. The main experimental manipulation was the interference between stimulus meaning and response requirements, which was measured through these conditions.
 
 
 
 \## Variables
 
-Reaction time (RT) was defined as the interval between stimulus presentation and participant response. Accuracy was coded as a correct or incorrect response on each trial. As mentioned, the condition was categorized into three levels. Participant ID defined unique subject identifiers after resolving the file-based session structure. The Stroop effect was computed at the subject level as the mean RT difference between the incongruent and congruent conditions.
+
+
+Reaction time (RT) was defined as the interval between stimulus presentation and participant response. Accuracy was coded as a correct or incorrect response on each trial. As mentioned, the condition was categorized into three levels. Participant ID defined unique subject identifiers after resolving the file-based session structure. The Stroop effect was computed at the subject level and the mean RT difference between the incongruent and congruent conditions.
 
 
 
 \## Preprocessing
 
-Raw data underwent several preprocessing steps before analysis. First, probe trials were removed from the dataset. Second, reaction time values below 0.20 seconds and above 2.0 seconds were excluded as unusually fast or delayed responses. Third, RT values coded as -1 were treated as invalid responses and removed. Fourth, multiple participant files were merged into a dataset after resolving the subject–session ambiguity. Finally, subject-level means were computed before inferential testing to compare conditions within participants.
+
+
+Raw data underwent several preprocessing steps before analysis. First, probe trials were removed from the dataset. Second, reaction time values below 0.20 and above 2.0 seconds were excluded as unusually fast or delayed responses. Third, RT values coded as -1 were treated as invalid responses and removed. Fourth, multiple participant files were merged into a dataset after resolving the subject–session ambiguity. Finally, subject-level means were computed before inferential testing to compare conditions within participants.
 
 
 
 \## Analysis plan
 
-The analysis followed a structured sequence. First, descriptive statistics were computed for RT and accuracy across conditions. Second, Stroop interference was calculated for each participant as the difference between incongruent and congruent mean RTs. Third, paired-samples t-tests were used to evaluate differences between conditions. Fourth, effect sizes were calculated using standardized within-subject measures. Fifth, confidence intervals were estimated for mean differences. Sixth, robustness checks were performed to assess the stability of results under the preprocessing decisions. Seventh, Wilcoxon signed-rank tests were used where appropriate to verify consistency with the parametric results. Finally, a simple simulation model was implemented to examine whether a baseline-plus-interference structure could reproduce the observed condition means.
+
+
+The analysis followed a structured sequence. First, descriptive statistics were computed for RT and accuracy across conditions. Secondly, Stroop interference was calculated for each participant as the difference between incongruent and congruent mean RTs. Third, paired-samples t-tests were used to evaluate differences between conditions. Fourth, effect sizes were calculated using standardized within-subject measures. Fifth, confidence intervals were estimated for mean differences. Sixth, robustness checks were performed to assess the stability of results under the preprocessing decisions. Seventh, Wilcoxon signed-rank tests were used to verify consistency with the results. And finally, a simple simulation model was added to examine whether a baseline-plus-interference structure could reproduce the observed condition means.
 
 
 
@@ -44,15 +56,23 @@ The analysis followed a structured sequence. First, descriptive statistics were 
 
 \## Sample and dataset summary
 
+
+
 The final analytic sample consisted of 81 participants. All participants contributed reaction time (RT) data across congruent, neutral, and incongruent conditions. Quality control checks displayed acceptable overall data quality, and no additional participants were excluded after quality control.
+
+
 
 Mean accuracy rates by condition are reported in accuracy-by-condition.csv. Accuracy was high across all conditions, suggesting generally consistent task performance. Participant-level quality control results are summarized in participant-qc.csv, and no further exclusions were applied during the analysis.
 
-Assumption checks for parametric testing are reported in assumption-checks.json. The distribution of the Stroop effect did not significantly deviate from normality (Shapiro–Wilk W = 0.971, p = 0.060). Skewness (0.410) and kurtosis (-0.573) were also within acceptable ranges, supporting the assumption of approximate normality.
+
+
+Assumption checks for parametric testing are reported in assumption-checks.json. The distribution of the Stroop effect did not significantly deviate from normality (Shapiro–Wilk W = 0.971, p = 0.060). Skewness (0.410) and kurtosis (-0.573) were also in the acceptable ranges. They supported the assumption of approximate normality.
 
 
 
 \## Descriptive RT pattern by condition
+
+
 
 Mean reaction times increased across conditions, with the fastest responses in the congruent condition and the slowest responses in the incongruent condition. Condition-level RT values are reported in rt-by-condition.csv.
 
@@ -62,53 +82,73 @@ Figure 1 (rt-by-condition-bar) shows the mean RT pattern across conditions and i
 
 \## Descriptive accuracy pattern by condition
 
+
+
 Accuracy was high across all conditions, with only small differences between conditions. Condition-level accuracy values are reported in accuracy-by-condition.csv. At the descriptive level, there was no clear evidence of a speed–accuracy trade-off.
 
 
 
 \## Stroop effect at participant level
 
-Participant-level Stroop interference scores were calculated as the difference between incongruent and congruent RTs. The distribution of these scores is summarized in subject-level-stroop-effects.csv.
 
-The mean Stroop effect was 0.1063 seconds. Considerable variation was observed across participants, as shown in Figure 5 (individual-difference-stroop-effect), suggesting that the magnitude of interference is different between individuals.
 
-Figures 3 (stroop-effect-distribution-bar) and 4 (stroop-effect-distribution-box) provide additional summaries of the Stroop effect distribution at the group level.
+Participants' Stroop interference scores were calculated as the difference between incongruent and congruent reaction times. The distribution of these scores is summarized in subject-level-stroop-effects.csv. The mean Stroop effect was 0.1063 seconds. Significant variation was observed across participants. It is shown in Figure 5 (individual-difference-stroop-effect). It suggested that the magnitude of interference is different across individuals. Figures 3 (stroop-effect-distribution-bar) and 4 (stroop-effect-distribution-box) provide additional summaries of the Stroop effect distribution at the group level.
 
 
 
 \## Inferential test result
 
-A paired-samples t-test showed a highly significant Stroop interference effect:
 
-t(80) = 17.77, p = 1.67 × 10⁻²⁹.
 
-The null hypothesis of no difference between incongruent and congruent reaction times was rejected.
+Paired-samples t-test showed a significant Stroop interference effect (t(80) = 17.77, p = 1.67 × 10⁻²⁹). The null hypothesis, which states that there is no difference between incongruent and congruent reaction times, was rejected.
 
 
 
 \## Effect size and confidence interval
 
-The magnitude of the Stroop effect was estimated using a paired-samples approach. The mean difference between incongruent and congruent conditions was 0.1063 seconds across 81 participants, with a 95% confidence interval calculated using a t-distribution-based standard error. It is reported in the analysis outputs. The effect was large and highly reliable (t(80) = 17.77, p < 10⁻²⁸, dz = 1.97), showing strong interference at the group level. Assumption checks also showed that the paired-difference distribution was approximately normal (Shapiro–Wilk W = 0.971, p = 0.060).
+
+
+The magnitude of the Stroop effect was estimated using a paired-samples approach. The mean difference between incongruent and congruent conditions was 0.1063 seconds across 81 participants. A 95% confidence interval was also calculated using a t-distribution-based standard error. It is reported in the analysis outputs. The effect was large and highly reliable (t(80) = 17.77, p < 10⁻²⁸, dz = 1.97). Showing strong interference at the group level. Assumption checks also showed that the paired-difference distribution was approximately normal (Shapiro–Wilk W = 0.971, p = 0.060).
 
 
 
 \## Robustness checks
 
-Normality of the paired difference scores was assessed using the Shapiro–Wilk test and additional distributional statistics (assumption-checks.json). The test was non-significant (p = 0.060), providing no strong evidence against normality.
 
-Skewness and kurtosis values remained within acceptable ranges for parametric analysis in a repeated-measures design. These results support the validity of the t-test results.
 
-Overall, there was no significant evidence of non-normality that would require primary reliance on non-parametric methods.
+Normality of the paired difference scores was assessed by using the Shapiro–Wilk test and additional distributional statistics (assumption-checks.json). The test was non-significant (p = 0.060), and it provided no strong evidence against normality. Skewness and kurtosis values also remained within acceptable ranges for parametric analysis in a repeated-measures design. These results support the validity of the t-test results. Overall, there was no significant evidence of non-normality.
 
-Model-vs-data comparison
+
+
+\## Model-vs-data comparison
+
+
+
+The simulation implements a minimal additive reaction-time model in which observed response latency is decomposed into three components: a baseline processing term, a condition-dependent interference term, and stochastic noise. Formally, the reaction time for trial i is defined as:
+
+
+
+RTᵢ = β₀ + β\_condition + εᵢ
+
+
+
+where β₀ represents baseline processing speed (derived from the congruent condition mean), β\_condition represents condition-specific additive costs (neutral and incongruent relative to congruent), and εᵢ is Gaussian noise with standard deviation estimated from the empirical RT distribution.
+
+
+
+The model parameters were not independently fit using optimization procedures. They were directly derived from empirical condition means and dispersion statistics. As such, the model should be interpreted as a descriptive generative baseline rather than a mechanistic or predictive cognitive model. Its purpose is to test whether a simple additive structure is sufficient to reproduce observed condition-level RT patterns.
+
+
 
 A computational simulation model was compared with the empirical RT distributions using a simple additive interference framework. Simulated outputs are provided in simulated-data.csv.
 
-Figure 7 (model-vs-data) compares the empirical and simulated RT distributions. The model reproduces the overall Stroop pattern, with slower responses in the incongruent condition and faster responses in the congruent and neutral conditions.
+Figure 7 (model-vs-data) compares the empirical and simulated RT distributions. The model reproduces the overall Stroop pattern, with slower responses in the incongruent condition and faster responses in the congruent conditions and the neutral conditions.
 
 
 
 \## Tables and figures reference summary
+
+
 
 Table 1: Condition-level descriptives (RT and accuracy) (table1-descriptives.csv)
 
@@ -154,7 +194,7 @@ Individual differences were a notable feature of the dataset and cannot be fully
 
 
 
-From a computational perspective, the Stroop task remains a classic paradigm for studying conflict between competing internal representations. It provides a controlled but meaningful setting for evaluating theories of selective attention, response selection, and cognitive control. Although the model used here is intentionally simple, it shows how a behavioral cognitive phenomenon can emerge from a small set of simple assumptions. More advanced approaches, such as sequential sampling models or conflict-monitoring frameworks, would be needed to capture temporal dynamics, learning effects, and full reaction-time distributions. Despite its simplicity, the model captures the core structure of cognitive interference and provides a foundation for more advanced approaches.
+From a computational perspective, the Stroop task remains a classic paradigm for studying conflict between competing internal representations. It provides a controlled setting for evaluating theories of selective attention, response selection, and cognitive control. Although the model used here is intentionally simple, it shows how a behavioral cognitive phenomenon can occur from a small set of simple assumptions. More advanced approaches, such as sequential sampling models or conflict-monitoring frameworks, would be needed to model temporal dynamics, learning effects, and full reaction-time distributions. Despite its simplicity, the model represents the core structure of cognitive interference. It provides a foundation for more advanced approaches.
 
 
 
@@ -166,7 +206,7 @@ This study is based on secondary behavioral data and therefore does not provide 
 
 
 
-Reaction time is an indirect measure of cognitive processing. It reflects the combined influence of different processes, including perceptual encoding, response selection, and motor execution. Therefore, reaction time alone cannot uniquely identify specific cognitive mechanisms such as conflict monitoring or attentional inhibition. The observed Stroop effect should be interpreted as a behavioral outcome rather than a direct measure of any single process.
+Reaction time is an indirect measure of cognitive processing. It reflects the combined influence of different processes, including perceptual encoding, response selection, and motor execution. Therefore, reaction time alone cannot uniquely identify specific cognitive mechanisms. The observed Stroop effect should be interpreted as a behavioral outcome rather than a direct measure of any single process.
 
 
 
