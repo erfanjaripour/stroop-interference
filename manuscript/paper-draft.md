@@ -158,3 +158,29 @@ From a computational perspective, the Stroop task remains a classic paradigm for
 
 
 
+\# Limitations
+
+
+
+This study is based on secondary behavioral data and therefore does not provide direct experimental control. As a result, causal conclusions about the cognitive mechanisms underlying Stroop interference cannot be drawn. The findings are correlational and limited to the structure of the observed dataset.
+
+
+
+Reaction time is an indirect measure of cognitive processing. It reflects the combined influence of different processes, including perceptual encoding, response selection, and motor execution. Therefore, reaction time alone cannot uniquely identify specific cognitive mechanisms such as conflict monitoring or attentional inhibition. The observed Stroop effect should be interpreted as a behavioral outcome rather than a direct measure of any single process.
+
+
+
+The dataset comes from previously collected sessions, and differences among participants cannot be fully controlled. This situation may introduce additional noise or bias into reaction time measures and estimates of individual differences.
+
+
+
+The computational model used in this project is intentionally simple and descriptive. Its scope is limited because it does not model established cognitive mechanisms. Consequently, it cannot capture process-level dynamics underlying response selection and conflict resolution. Therefore, it should be interpreted as a minimal baseline model rather than a mechanistic account of Stroop interference.
+
+
+
+Finally, although the dataset provides strong evidence for a Stroop interference effect at both the group and individual levels, it does not identify a single underlying cognitive mechanism. Several theoretical accounts could produce similar behavioral patterns. Therefore, the findings are consistent with Stroop interference in general, rather than supporting one specific theory.
+
+
+
+Overall, this study demonstrates reliable behavioral interference effects and a simple computational model of those effects. However, it remains limited in terms of causal inference, mechanistic specificity, and experimental control.
+
