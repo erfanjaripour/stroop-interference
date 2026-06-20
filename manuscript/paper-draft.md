@@ -128,3 +128,33 @@ Figure 6: baseline-vs-effect
 
 Figure 7: model-vs-data
 
+
+
+\# Discussion
+
+
+
+The present findings show a robust Stroop interference effect across participants. Incongruent trials produced significantly slower reaction times and lower accuracy than congruent trials, while neutral trials consistently fell between the two conditions. This pattern was stable across the sample, within 81 participants, with a large and highly reliable effect on reaction time (mean interference = 0.106 s, t(80) = 17.77, p < 0.001, dz = 1.97). Assumption checks showed no significant deviation from normality in the within-subject effect distribution (Shapiro–Wilk W = 0.971, p = 0.060), with only mild positive skewness (0.41) and slight platykurtosis (-0.57), supporting the use of parametric tests.
+
+
+
+The most likely interpretation of these results is response conflict between competing stimulus representations. In incongruent trials, the automatically activated reading process conflicts with the task-relevant color-naming process, making decisions more difficult and slowing response selection. Neutral trials lack direct semantic conflict and therefore reduce, but do not eliminate, processing demands, resulting in an intermediate level of interference. Within this framework, the Stroop effect emerges from competition between parallel cognitive representations during response selection.
+
+
+
+Alternative explanations are also possible and cannot be distinguished by the present analysis. An attention-based account would explain the effect in terms of attentional allocation, where incongruent stimuli require additional selective attention to suppress irrelevant word information. A conflict-monitoring account, within the framework of adaptive control theories, would emphasize the regulation of cognitive control following conflict detection, potentially influencing later performance in addition to immediate reaction times. Executive-control accounts similarly interpret the effect as reflecting limitations in top-down control during stimulus-response mapping. The present data do not allow us to distinguish among these explanations. At the behavioral level, the findings are consistent with all three, highlighting that it is difficult to infer cognitive mechanisms from aggregate reaction-time measures alone.
+
+
+
+The computational model used in this project captures the main pattern in the data, which is slower responses in incongruent trials, intermediate responses in neutral trials, and faster responses in congruent trials. However, it should not be considered a mechanistic model of cognitive processing. Instead, it represents differences of conditions as additive costs applied to a baseline reaction time with stochastic noise. The model reproduces only mean-level effects. As a result, its explanatory power is limited to describing the observed pattern rather than explaining the underlying cognitive processes.
+
+
+
+Individual differences were a notable feature of the dataset and cannot be fully captured by group-level effects. Participants showed significant variability in both baseline response speed and the strength of Stroop interference, showing differences in sensitivity to interference. This pattern suggests that cognitive control efficiency and processing speed may be partially independent constructs. In addition, unequal trial counts across participants and conditions introduced differences in measurement reliability, meaning that some individual estimates are likely more reliable than others. These observations highlight the importance of viewing interference not only as a group-level effect but also as a distribution of effects across individuals.
+
+
+
+From a computational perspective, the Stroop task remains a classic paradigm for studying conflict between competing internal representations. It provides a controlled but meaningful setting for evaluating theories of selective attention, response selection, and cognitive control. Although the model used here is intentionally simple, it shows how a behavioral cognitive phenomenon can emerge from a small set of simple assumptions. More advanced approaches, such as sequential sampling models or conflict-monitoring frameworks, would be needed to capture temporal dynamics, learning effects, and full reaction-time distributions. Despite its simplicity, the model captures the core structure of cognitive interference and provides a foundation for more advanced approaches.
+
+
+
