@@ -260,3 +260,11 @@ Overall, this study demonstrates reliable behavioral interference effects and a 
 
 This project examined cognitive interference in the Stroop task using publicly available behavioral data from 81 participants. The results showed a clear and robust Stroop effect: incongruent trials produced slower reaction times than congruent trials, while neutral trials fell between the two conditions. Accuracy remained high across conditions, suggesting that the observed effect was not driven by a simple speed–accuracy trade-off. The interference effect was large, statistically reliable, and consistent with a stable pattern of conflict in response selection. At the individual level, the data also showed meaningful variation in Stroop interference magnitude, indicating that cognitive control performance is not uniform across participants. In addition, a simple simulation modeled the main condition-level pattern. These results support the interpretation that the Stroop task effectively measures cognitive interference. They also highlight the importance of individual differences and model-based analysis in understanding performance.
 
+
+
+\# Acknowledgements
+
+
+
+This project used publicly available data shared through the Open Science Framework. I thank the original contributors for making the dataset accessible for analysis and supporting open research practices. In addition, I acknowledge the open-source Python ecosystem, which made it possible to analyze, visualize, and model, as this reproducible workflow.
+
