@@ -268,3 +268,29 @@ This project examined cognitive interference in the Stroop task using publicly a
 
 This project used publicly available data shared through the Open Science Framework. I thank the original contributors for making the dataset accessible for analysis and supporting open research practices. In addition, I acknowledge the open-source Python ecosystem, which made it possible to analyze, visualize, and model, as this reproducible workflow.
 
+
+
+\# References
+
+
+
+Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., \& Cohen, J. D. (2001). Conflict monitoring and cognitive control. \*Psychological Review, 108\*(3), 624–652. https://doi.org/10.1037/0033-295X.108.3.624
+
+
+
+MacLeod, C. M. (1991). Half a century of research on the Stroop effect: An integrative review. \*Psychological Bulletin, 109\*(2), 163–203. https://doi.org/10.1037/0033-2909.109.2.163
+
+
+
+Parris, B. A., Hasshim, N., Wadsley, M., Augustinova, M., \& Ferrand, L. (2022). The loci of Stroop effects: A critical review of methods and evidence for levels of processing contributing to color-word Stroop effects and the implications for the loci of attentional selection. \*Psychological Research, 86\*(4), 1029–1053. https://doi.org/10.1007/s00426-021-01554-x
+
+
+
+Scarpina, F., \& Tagini, S. (2017). The Stroop Color and Word Test. \*Frontiers in Psychology, 8\*, Article 557. https://doi.org/10.3389/fpsyg.2017.00557
+
+
+
+Stroop, J. R. (1935). Studies of interference in serial verbal reactions. \*Journal of Experimental Psychology, 18\*(6), 643–662. https://doi.org/10.1037/h0054651
+
+
+
