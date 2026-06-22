@@ -6,6 +6,24 @@ The Stroop task is a classic paradigm for studying cognitive interference, selec
 
 
 
+\# Introduction
+
+
+
+The Stroop task is one of the widely used paradigms for studying cognitive interference, selective attention, and cognitive control. In the classic color-word version of the Stroop task, participants are required to identify the ink color of a stimulus while ignoring its semantic content.  When the word meaning conflicts with the ink color, for instance, the word ‘RED’ printed in blue ink, performance is generally slower and less accurate than when the meaning and the color are consistent. This phenomenon is known as the Stroop effect. It was first systematically documented by Stroop (1935) and thereafter became a central tool for studying how competing sources of information influence behavior. Decades of research have indicated that the Stroop effect is robust across a wide range of experimental settings and populations. Indeed, it became one of the most reliable findings in cognitive psychology (MacLeod, 1991). The Stroop task, in both experimental and applied contexts, remains a standard measure of cognitive interference and inhibitory control (Scarpina \& Tagini, 2017).
+
+&nbsp;	
+
+Although the behavioral pattern itself is well established, its underlying cognitive cause remains the subject of theoretical debate. Early accounts emphasized automaticity, suggesting that reading is a highly practiced process, and it is difficult to suppress when participants are instructed to name ink colors. Other approaches have focused on selective attention and the allocation of processing resources to task-relevant information. More recent theories emphasize response conflict and cognitive control mechanisms. In conflict-monitoring frameworks, interference arises because competing representations activate incompatible responses; as a result, for control processes that regulate behavior, it increases the demand (Botvinick et al., 2001). At the same time, contemporary reviews argue that Stroop interference cannot be attributed to a single processing stage and may reflect contributions from perceptual, semantic, and response-level sources of conflict. Consequently, important questions remain about the exact origins of the effect and the interpretation of behavioral measures that are caused by Stroop performance (Parris et al., 2021).
+
+&nbsp;	
+
+Building on this literature, the present study adopts a data-driven and reproducible analytical approach rather than attempting to adjudicate between competing theoretical accounts. Using an openly available trial-level dataset, the study quantifies Stroop interference across congruent, incongruent, and neutral conditions, examines inter-individual variability in interference magnitude, and evaluates whether a simple additive baseline-plus-interference model can account for observed behavioral patterns. In addition to group-level estimates of reaction time and accuracy effects, the analysis characterizes variability across participants, providing a more fine-grained description of performance than condition averages alone.
+
+&nbsp;	
+
+The primary aim of the study is to examine the impact of cognitive interference on reaction time and accuracy in the Stroop task. It is hypothesized that incongruent trials will produce slower responses than congruent trials, with neutral trials yielding intermediate performance. A secondary aim is to quantify individual differences in interference magnitude. Finally, a simple computational model is used to evaluate whether an additive structure can reproduce the main behavioral effects observed in the empirical data. Together, these analyses provide a transparent and reproducible characterization of Stroop performance while illustrating how behavioral analysis and computational modeling can be integrated within a unified framework.
+
 
 
 \# Methods
