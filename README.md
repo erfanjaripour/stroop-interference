@@ -104,33 +104,33 @@ A simple additive model of interference reproduces the observed condition-level 
 
 
 
-Figure 1 — Reaction Time by Condition (Bar Plot)
+Figure 1 — Mean RT by Condition
 
-Reaction times' means across congruent, neutral, and incongruent conditions.
+Mean reaction times for congruent, incongruent, and neutral trials.
 
-Figure 2 — Reaction Time by Condition (Box Plot)
 
-Distribution of reaction times across experimental conditions, including variability and outliers.
 
-Figure 3 — Stroop Effect Distribution (Bar Plot)
+Figure 2 — RT Distribution by Condition
 
-Group-level summary of Stroop interference magnitude.
+Participant-level reaction time distributions across experimental conditions.
 
-Figure 4 — Stroop Effect Distribution (Box Plot)
 
-Distribution of reaction time differences associated with Stroop interference.
 
-Figure 5 — Individual Differences in Stroop Effect
+Figure 3 — Stroop Effect Distribution
 
-Participant-specific Stroop interference scores.
+Distribution of participant-specific Stroop interference effects (incongruent − congruent RT).
 
-Figure 6 — Baseline Speed vs. Interference Effect
 
-Relationship between congruent-condition reaction time and Stroop interference magnitude.
 
-Figure 7 — Model vs. Data Comparison
+Figure 4 — Baseline RT vs. Stroop Effect
 
-Comparison of empirical reaction time distributions and simulated model outputs.
+Relationship between baseline processing speed and interference magnitude.
+
+
+
+Figure 5 — Model vs. Data Comparison
+
+Comparison of observed and simulated reaction time distributions.
 
 
 
