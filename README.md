@@ -178,31 +178,17 @@ stroop-interference/
 
 │   ├── baseline-vs-effect.png
 
-│   ├── individual-difference-stroop-effect.pdf
+│   ├── distribution-stroop-effects.pdf
 
-│   ├── individual-difference-stroop-effect.png
+│   ├── distribution-stroop-effects.png
 
 │   ├── model-vs-data.pdf
 
 │   ├── model-vs-data.png
 
-│   ├── rt-by-condition-bar.pdf
+│   ├── rt-by-condition.pdf
 
-│   ├── rt-by-condition-bar.png
-
-│   ├── rt-by-condition-box.pdf
-
-│   ├── rt-by-condition-box.png
-
-│   ├── stroop-effect-distribution-bar.pdf
-
-│   ├── stroop-effect-distribution-bar.png
-
-│   ├── stroop-effect-distribution-box.pdf
-
-│   ├── stroop-effect-distribution-box.png
-
-│
+│   ├── rt-by-condition.png
 
 │
 
@@ -228,23 +214,19 @@ stroop-interference/
 
 ├── results/
 
-│   ├── accuracy-by-condition.csv
-
 │   ├── assumption-checks.json
 
-│   ├── participant-qc.csv
+│   ├── descriptives.csv
 
-│   ├── rt-by-condition.csv
+│   ├── inferential-results.csv
+
+│   ├── participant-qc.csv
 
 │   ├── simulated-data.csv
 
 │   ├── stroop-summary.json
 
 │   ├── subject-level-stroop-effects.csv
-
-│   ├── table1-descriptives.csv
-
-│   ├── table2-inferential-results.csv
 
 │
 
